@@ -39,7 +39,7 @@ to quit it.
 
 ### 5) (Optional) Create an executable using the following command
 
-`$ python3 -m PyInstaller --windowed myPRL.py`
+`$ python3 -m PyInstaller myPRL.spec`
 
 Preferably use a virtual environment if you plan to create an executable as it will only include the required dependencies. A **dist** folder will be created containing the executable.
 
@@ -71,6 +71,6 @@ or run `myPRL.py` using your favorite python interpreter.
 
 ### 5) (Optional) Create an executable using the following command
 
-`> python3 -m PyInstaller --windowed myPRL.py`
+`> python3 -m PyInstaller myPRL.spec`
 
 Preferably use a virtual environment if you plan to create an executable as it will only include the required dependencies. A **dist** folder will be created containing the `.exe` file. You may have to run the command prompt as admin. 
