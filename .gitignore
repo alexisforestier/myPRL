@@ -1,0 +1,39 @@
+__pycache__/
+
+# Environment
+.venv/
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# Nuitka
+myPRL.build/
+myPRL.dist/
+
+
+# MyPRL pkl 'session' binary files
+*.pkl
+
+# svg icon
+my_PRL_icon.svg__pycache__/
+
+# Environment
+.venv/
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# Nuitka
+myPRL.build/
+myPRL.dist/
+
+
+# MyPRL pkl 'session' binary files
+*.pkl
+
+# svg icon
+my_PRL_icon.svg
