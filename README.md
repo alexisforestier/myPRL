@@ -7,7 +7,7 @@ The program uses the International Practical Pressure Scale (IPPS) "Ruby2020" pr
 
 Do not hesitate to contact me if you want more information, to report a bug, or to propose improvements.
 
-## Installation (GNU/Linux)
+## Use (GNU/Linux)
 
 ### 1) Get a copy of the code:
 
@@ -43,7 +43,7 @@ to quit it.
 
 Preferably use a virtual environment if you plan to create an executable as it will only include the required dependencies. A **dist** folder will be created containing the executable.
 
-## Installation (Windows)
+## Use (Windows)
 
 ### 1) Download the source code as a .zip file and extract it where you want
 
@@ -73,4 +73,4 @@ or run `myPRL.py` using your favorite python interpreter.
 
 `> python3 -m PyInstaller --windowed myPRL.py`
 
-Preferably use a virtual environment if you plan to create an executable as it will only include the required dependencies. A **dist** folder will be created containing the `.exe` file. You may have to run the command prompt as admin.
+Preferably use a virtual environment if you plan to create an executable as it will only include the required dependencies. A **dist** folder will be created containing the `.exe` file. You may have to run the command prompt as admin. 

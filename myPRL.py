@@ -476,6 +476,8 @@ class MyPRL(tk.Tk):
 
         self._update_rubylist_Var()
 
+        self.plot_spec()
+
     def get_rubberband_bg(self):
         """ Get background for all spectra selected """
         selec = self._get_selected_spec()
