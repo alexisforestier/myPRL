@@ -725,7 +725,8 @@ class MyPRL(tk.Tk):
             if 'yfit' in self.rubies[name].data:
                 self.plot.plot(x, self.rubies[name].data['yfit'], 
                     '-', color='darkorange', label='best fit')
-                self.plot.plot(x, self.rubies[name].fit_components.iloc[:,1:], 
+                self.plot.plot(x, \
+                    self.rubies[name].fit_components.iloc[:,1:].values, 
                     '--', color='darkred', label='component')
                 self.plot.axvline(x = self.rubies[name].fit_param[3],
                      color='k')
@@ -741,7 +742,7 @@ class MyPRL(tk.Tk):
                     l = self.rubies[name].lambda_ruby
 
                     self.plot.text(x=text_x, 
-                                   y=text_y, 
+                                   y=text_y,    
                                    s= '    \u03BB = ' + 
                                    str(round(l,4)) + ' nm' +
                                    '\n    P = ' +
