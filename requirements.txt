@@ -1,13 +1,7 @@
-cycler
-kiwisolver
+wheel
 matplotlib
 numpy
 pandas
-Pillow
-pyparsing
-python-dateutil
-pytz
 scipy
-six
-wheel
+Pillow
 pyinstaller
