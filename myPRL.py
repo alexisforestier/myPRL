@@ -693,13 +693,18 @@ class MyPRL(tk.Tk):
         # Unfortunalty this forces rescaling
 #        self.plot.cla() # clear for the new plot
 
-        # instead remove all collections, lines and text :
-        while self.plot.collections != []:
-            self.plot.collections[0].remove()
-        while self.plot.lines != []:
-            self.plot.lines[0].remove()
-        while self.plot.texts != []:
-            self.plot.texts[0].remove()
+        # instead remove all collections, lines and texts:
+        # matplotlib 3.5.1
+        self.plot.collections.clear()
+        self.plot.lines.clear()
+        self.plot.texts.clear()
+        # was ok for previous matplotlib versions:  
+        # while self.plot.collections != []:
+        #     self.plot.collections[0].remove()
+        # while self.plot.lines != []:
+        #     self.plot.lines[0].remove()
+        # while self.plot.texts != []:
+        #     self.plot.texts[0].remove()
 
         for name in selec:
             x = self.rubies[name].data['x']
