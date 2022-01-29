@@ -653,7 +653,7 @@ class MyPRL(tk.Tk):
 
             self.button_group.configure(bg='#d9d9d9', 
                                             activebackground='#d9d9d9',
-                                            fg="black",
+                                            fg="green",
                                             text="Group")
 
     def _group_selec(self, selec):
@@ -670,7 +670,7 @@ class MyPRL(tk.Tk):
         else:
             self.button_group.configure(bg='#d9d9d9', 
                                         activebackground='#d9d9d9',
-                                        fg="black",
+                                        fg="green",
                                         text="Group")
         sel = []
         for name in selec:
@@ -690,7 +690,16 @@ class MyPRL(tk.Tk):
         selec = self._get_selected_spec()
         selec += self._group_selec(selec)
 
-        self.plot.cla() # clear for the new plot
+        # Unfortunalty this forces rescaling
+#        self.plot.cla() # clear for the new plot
+
+        # instead remove all collections, lines and text :
+        while self.plot.collections != []:
+            self.plot.collections[0].remove()
+        while self.plot.lines != []:
+            self.plot.lines[0].remove()
+        while self.plot.texts != []:
+            self.plot.texts[0].remove()
 
         for name in selec:
             x = self.rubies[name].data['x']
@@ -752,7 +761,10 @@ class MyPRL(tk.Tk):
                     self._update_printed_P_lambda(round(p,2),'NA')
 
         self.canvas.draw()
-        self.toolbar.update()
+
+        # do not update toolbar 
+        # to keep restore original view after changing file vizualised
+        #self.toolbar.update()
 
     def export_P(self):
         """ Export calculated pressure values in a txt file. """
